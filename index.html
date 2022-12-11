@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Hydrogen Fuel | S.S.S </title>
+<style>
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+</style>
+<script id="wpcp_disable_selection" type="text/javascript">
+//<![CDATA[
+var image_save_msg='You Can Not Save images!';
+var no_menu_msg='Context Menu disabled!';
+var smessage = "Content is protected !!";
+function disableEnterKey(e)
+{
+  if (e.ctrlKey){
+     var key;
+     if(window.event)
+          key = window.event.keyCode;     //IE
+     else
+          key = e.which;     //firefox (97)
+    //if (key != 17) alert(key);
+     if (key == 97 || key == 65 || key == 67 || key == 99 || key == 88 || key == 120 || key == 26 || key == 85  || key == 86 || key == 83 || key == 43)
+     {
+          show_wpcp_message('You are not allowed to copy content or view source');
+          return false;
+     }else
+       return true;
+     }
+}
+function disable_copy(e)
+{  
+  var elemtype = e.target.nodeName;
+  var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+  elemtype = elemtype.toUpperCase();
+  var checker_IMG = '';
+  if (elemtype == "IMG" && checker_IMG == 'checked' && e.detail >= 2) {show_wpcp_message(alertMsg_IMG);return false;}
+  if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
+  {
+    if (smessage !== "" && e.detail == 2)
+      show_wpcp_message(smessage);
+    
+    if (isSafari)
+      return true;
+    else
+      return false;
+  }  
+}
+function disable_copy_ie()
+{
+  var elemtype = window.event.srcElement.nodeName;
+  elemtype = elemtype.toUpperCase();
+  if (elemtype == "IMG") {show_wpcp_message(alertMsg_IMG);return false;}
+  if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
+  {
+    //alert(navigator.userAgent.indexOf('MSIE'));
+      //if (smessage !== "") show_wpcp_message(smessage);
+    return false;
+  }
+}  
+function reEnable()
+{
+  return true;
+}
+document.onkeydown = disableEnterKey;
+document.onselectstart = disable_copy_ie;
+if(navigator.userAgent.indexOf('MSIE')==-1)
+{
+  document.onmousedown = disable_copy;
+  document.onclick = reEnable;
+}
+function disableSelection(target)
+{
+    //For IE This code will work
+    if (typeof target.onselectstart!="undefined")
+    target.onselectstart = disable_copy_ie;
+    
+    //For Firefox This code will work
+    else if (typeof target.style.MozUserSelect!="undefined")
+    {target.style.MozUserSelect="none";}
+    
+    //All other  (ie: Opera) This code will work
+    else
+    target.onmousedown=function(){return false}
+    target.style.cursor = "default";
+}
+//Calling the JS function directly just after body load
+window.onload = function(){disableSelection(document.body);};
+//]]>
+</script>
+<script id="wpcp_disable_Right_Click" type="text/javascript">
+  //<![CDATA[
+  document.ondragstart = function() { return false;}
+  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Disable context menu on images by GreenLava Version 1.0
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+      function nocontext(e) {
+         return false;
+      }
+      document.oncontextmenu = nocontext;
+  //]]>
+</script>
+<style>
+.unselectable
+{
+-moz-user-select:none;
+-webkit-user-select:none;
+cursor: default;
+}
+html
+{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+</style>
+<script id="wpcp_css_disable_selection" type="text/javascript">
+var e = document.getElementsByTagName('body')[0];
+if(e)
+{
+  e.setAttribute('unselectable',on);
+}
+</script>
+<script type="text/javascript">
+    window.onbeforeunload = function() {
+        return "Are you sure you want to leave?";
+    }
+</script>
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #F0F0F0;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top">  ^  </button>
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<style>
+ a.button3{
+ display:inline-block;
+ padding:0.3em 1.2em;
+ margin:0 0.3em 0.3em 0;
+ border-radius:2em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#f5f5f5;
+ background-color:black;
+ text-align:center;
+ transition: all 0.2s;
+}
+a.button3:hover{
+ background-color:grey;
+}
+@media all and (max-width:30em){
+ a.button3{
+  display:block;
+  margin:0.2em auto;
+ }
+}
+</style>
+</head>
+<body style="background-color:black;">
+<body>
+
+<center>
+<div style="background-color:#F8F8F8;color:black;padding:30px">
+<h1>hydrogen fuel from seawater</h1>
+<div id="google_translate_element"></div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<br><br>
+
+<iframe width="1000" height="600" src="https://www.youtube.com/embed/x4vuxaAYExs" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br><br><br><br>
+<div style="background-color:white;color:black;padding:30px">
+<img src="https://i.ibb.co/JFc33Pk/wt.png" alt="wt" border="0">
+<br><br>
+<p>Splitting water into hydrogen and oxygen presents an alternative to fossil fuels, but purified water is a precious resource. new way of separating hydrogen and oxygen gas from seawater via electricity. Existing water-splitting methods rely on highly purified water, which is a precious resource and costly to produce.
+Theoretically, to power cities and cars, “you need so much hydrogen it is not conceivable to use purified water,” said Hongjie Dai, J.G. Jackson and C.J. Wood professor in chemistry in Stanford’s School of Humanities and Sciences and co-senior author on the paper. “We barely have enough water for our current needs in California.”Hydrogen is an appealing option for fuel because it doesn’t emit carbon dioxide, Dai said. Burning hydrogen produces only water and should ease worsening climate change problems.
+
+Dai said his lab showed proof-of-concept with a demo, but the researchers will leave it up to manufacturers to scale and mass produce the design.<br><br><br>
+
+Surprisingly simple
+Looking back, Dai and Kenney can see the simplicity of their design. “If we had a crystal ball three years ago, it would have been done in a month,” Dai said. But now that the basic recipe is figured out for electrolysis with seawater, the new method will open doors for increasing the availability of hydrogen fuel powered by solar or wind energy.
+
+In the future, the technology could be used for purposes beyond generating energy. Since the process also produces breathable oxygen, divers or submarines could bring devices into the ocean and generate oxygen down below without having to surface for air.
+
+In terms of transferring the technology, “one could just use these elements in existing electrolyzer systems and that could be pretty quick,” Dai said. “It’s not like starting from zero – it’s more like starting from 80 or 90 percent.”
+</p>
+
+
+</div>
+<br><br><br>
+
+<embed src="https://scriptties.github.io/Hydrogen-Generator/" style="width:1300px; height: 500px;">
+
+<br><br><br>
+
+<div style="background-color:#F8F8F8;color:black;padding:30px">
+<a href="" class="button3">Show Demo</a>
+</div>
+<div style="background-color:white;color:black;padding:30px">
+<p>Tackling corrosion
+As a concept, splitting water into hydrogen and oxygen with electricity – called electrolysis – is a simple and old idea: a power source connects to two electrodes placed in water. When power turns on, hydrogen gas bubbles out of the negative end – called the cathode – and breathable oxygen emerges at the positive end – the anode.
+
+But negatively charged chloride in seawater salt can corrode the positive end, limiting the system’s lifespan. Dai and his team wanted to find a way to stop those seawater components from breaking down the submerged anodes.
+
+The researchers discovered that if they coated the anode with layers that were rich in negative charges, the layers repelled chloride and slowed down the decay of the underlying metal.
+
+They layered nickel-iron hydroxide on top of nickel sulfide, which covers a nickel foam core. The nickel foam acts as a conductor – transporting electricity from the power source – and the nickel-iron hydroxide sparks the electrolysis, separating water into oxygen and hydrogen. During electrolysis, the nickel sulfide evolves into a negatively charged layer that protects the anode. Just as the negative ends of two magnets push against one another, the negatively charged layer repels chloride and prevents it from reaching the core metal.
+
+Without the negatively charged coating, the anode only works for around 12 hours in seawater, according to Michael Kenney, a graduate student in the Dai lab and co-lead author on the paper. “The whole electrode falls apart into a crumble,” Kenney said. “But with this layer, it is able to go more than a thousand hours.”
+
+Previous studies attempting to split seawater for hydrogen fuel had run low amounts of electric current, because corrosion occurs at higher currents. But Dai, Kenney and their colleagues were able to conduct up to 10 times more electricity through their multi-layer device, which helps it generate hydrogen from seawater at a faster rate.</p>
+<br><br>
+<h6><b>discussion regarding hydrogen used instead of fossil fuels</b></h6>
+<script src="https://minnit.chat/js/embed.js" defer></script><minnit-chat data-chatname="https://organizations.minnit.chat/584813353528335/hydrogendiscussion?embed&nickname=" data-style="width:90%;height:500px;"></minnit-chat>
+<br>
+</div>
+pp
+<br><br><br><br><br><br>
+<div style="background-color:white;color:black;padding:30px">
+<center><img src="https://i.ibb.co/Wvg7K3G/Powered-By-SSS-removebg-preview.png" alt="Powered-By-SSS-removebg-preview" border="0"></center>
+</div>
+
+</body>
+</html>
